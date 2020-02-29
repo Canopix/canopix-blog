@@ -36,14 +36,20 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          `Fjalla One`,
+          {
+            family: `Maven Pro`,
+            variants: [`400`,`600`, `700`, `900`]
+          },
+          {
+            family: `Roboto`,
+            subsets: [`latin`]
+          },
         ],
-        display: 'swap'
-      }
-    }
+      },
+    },
     `gatsby-transformer-remark`,
   ],
 }
