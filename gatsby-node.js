@@ -11,34 +11,37 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
   const result = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allMdx(sort: { order: DESC, fields: frontmatter___date }) {
         edges {
           node {
+            id
             frontmatter {
-              pathDir
+              title
+              date
+              path
             }
           }
         }
       }
     }
   `)
-
   // Handle errors
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMdx.edges.forEach(({ node }) => {
+    const { path } = node.frontmatter ;
+
     createPage({
-      pathDir: node.frontmatter.path,
+      path: `${path}`,
       component: blogPostTemplate,
-      context: {
-        path:node.frontmatter.path
-      }, // additional data can be passed via context
-    })
-  })
+      context: { 
+        id: node.id,
+        title: node.title,
+        pathDir: path,
+      },
+    });
+  });
 }

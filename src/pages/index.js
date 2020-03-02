@@ -1,12 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Lastest from '../components/Lastest'
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
+    <Lastest/>
     <SEO title="Home" />
     <h1 className="text-gray-400">Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>

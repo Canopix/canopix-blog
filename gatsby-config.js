@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Emanuel Canova`,
+    description: `Where the code is rising up...`,
+    author: `@emanuelcanova`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -31,25 +31,33 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
+        name: `pages`,
         path: `${__dirname}/src/blog`,
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        fonts: [
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
           {
-            family: `Maven Pro`,
-            variants: [`400`,`600`, `700`, `900`]
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
           },
           {
-            family: `Roboto`,
-            subsets: [`latin`]
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-feed-mdx`,
   ],
 }
