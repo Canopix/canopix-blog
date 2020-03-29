@@ -2,26 +2,48 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+const subLinks = [
+  {
+    name: 'Blog',
+    url:'/'
+  },
+  {
+    name: 'About Me',
+    url:'/'
+  },
+  {
+    name: 'Contact',
+    url:'/'
+  }
+]
+
 const Header = ({ siteTitle }) => (
-  <header className="bg-gray-800">
+  <header className="bg-yellow-500">
     <div
+      className="flex flex-col md:flex-row  text-center md:text-left justify-between "
       style={{
-        margin: `0 auto`,
         maxWidth: 960,
+        margin: `0 auto`,
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h3 className="text-black m-0 w-full md:w-1/4">
         <Link
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
         >
           {siteTitle}
         </Link>
-      </h1>
+      </h3>
+      <div className="flex flex-col md:flex-row w-full md:w-1/4 justify-between padding-5 mt-1">
+      {
+        subLinks.map(link => (
+          <Link to={link.url}>
+            <h5 className="text-black m-0">{link.name}</h5>
+          </Link>
+        ))
+      }
+      </div>
+      
     </div>
   </header>
 )

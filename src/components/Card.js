@@ -4,13 +4,17 @@ const Card = ({post}) => {
     const {
         node: article
     } = post;
+    const img = article.frontmatter.featuredImage.childImageSharp.fluid.src;
     return (
-        <div className="p-2 border min-w-full rounded border-gray-400">
-            <h1>{article.frontmatter.title}</h1>
-            <p>{article.excerpt}</p>
-            <img src={article.frontmatter.featuredImage.childImageSharp.fluid.src}></img>
-
-            </div>
+        <div className="flex content-end p-2  min-w-full">
+            <a href={article.frontmatter.path}>
+                <div>
+                    <h2 className="m-0">{article.frontmatter.title}</h2>
+                    <p>{article.frontmatter.date}</p>
+                    <p>{article.excerpt}</p>
+                </div>
+            </a>
+        </div>
     )
 }
 

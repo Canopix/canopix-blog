@@ -3,9 +3,7 @@ import Layout from '../components/layout';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { graphql } from "gatsby"
 
-export default function Template({
-  data,
-}) {
+export default function Template({data}) {
   const { mdx } = data 
   return (
     <>

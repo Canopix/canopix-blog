@@ -9,9 +9,10 @@ const path = require(`path`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+  const categoryTemplate = path.resolve(`src/templates/categoryTemplate.js`)
   const result = await graphql(`
     {
-      allMdx(sort: { order: DESC, fields: frontmatter___date }) {
+      postsMDX: allMdx(sort: { order: DESC, fields: frontmatter___date }) {
         edges {
           node {
             id
@@ -24,6 +25,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
+    categoryGroup: allMdx {
+      distinct(field: frontmatter___category)
+    }
   `)
   // Handle errors
   if (result.errors) {
@@ -31,7 +35,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMdx.edges.forEach(({ node }) => {
+  result.data.postsMDX.allMdx.edges.forEach(({ node }) => {
     const { path } = node.frontmatter ;
 
     createPage({
@@ -44,4 +48,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     });
   });
+
+  result.data.categoryGroup.allMdx.distinct.forEach(({category}) => {
+    createPage({
+      category: `${category}`,
+      component: categoryTemplate,
+      context: {
+        categoryName: category
+      }
+    })
+  })
 }

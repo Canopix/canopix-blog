@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="text-black josefin flex flex-col min-h-screen">
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -34,14 +34,14 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
+        <main className="flex-grow">{children}</main>
+        <footer className="bottom-0">
+          © {new Date().getFullYear()},
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.emanuelcanova.com">Emanuel Canova</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
