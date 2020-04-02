@@ -9,7 +9,7 @@ export default function Template({data}) {
     <>
     <Layout>
      <div className="blog-post-container">
-       <div className="blog-post">
+       <div className="blog-post text-white">
        <MDXRenderer>{mdx.body}</MDXRenderer>
        </div>
      </div>

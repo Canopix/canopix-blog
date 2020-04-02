@@ -6,12 +6,12 @@ const Card = ({post}) => {
     } = post;
     const img = article.frontmatter.featuredImage.childImageSharp.fluid.src;
     return (
-        <div className="flex content-end p-2  min-w-full">
+        <div className="flex text-white content-end p-2  min-w-full">
             <a href={article.frontmatter.path}>
                 <div>
-                    <h2 className="m-0">{article.frontmatter.title}</h2>
-                    <p>{article.frontmatter.date}</p>
-                    <p>{article.excerpt}</p>
+                    <h2 className="m-0 Nunito-800">{article.frontmatter.title}</h2>
+                    <p className="Nunito-200">{article.frontmatter.date}</p>
+                    <p className="Nunito-400">{article.excerpt}</p>
                 </div>
             </a>
         </div>

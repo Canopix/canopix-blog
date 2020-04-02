@@ -2,11 +2,15 @@ import React from "react"
 import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql } from "gatsby"
+import Dump from '../components/Dump'
 
-export default function categoryTemplate({ pageContext, data }) {
+function categoryTemplate({ pageContext, data }) {
+  const {nodes} = data.allMdx;
   return (
     <Layout>
-      <h1>{pageContext.categoryName}</h1>
+      <Dump data={data}/>
+      <h3>Category: {pageContext.category}</h3>
+      {nodes.map(post => post.frontmatter.title)}
     </Layout>
   )
 }

@@ -6,7 +6,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap');
 .josefin {
     font-family: 'Josefin', sans-serif;
     font-weight: 345;
 }
+
+.Nunito-200 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+}
+
+.Nunito-400 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+.Nunito-800 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+}
+

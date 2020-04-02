@@ -30,7 +30,6 @@ const Lastest = () => {
       }
     `)
     const {edges} = data.allMdx;
-    console.log(edges);
     return (
         <div className="grid grid-cols-1 gap-3 mt-4">
             {edges.map(post =>

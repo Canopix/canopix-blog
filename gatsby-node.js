@@ -24,9 +24,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-    }
-    categoryGroup: allMdx {
-      distinct(field: frontmatter___category)
+
+      categoryGroup: allMdx {
+        distinct(field: frontmatter___category)
+      }
     }
   `)
   // Handle errors
@@ -35,27 +36,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.postsMDX.allMdx.edges.forEach(({ node }) => {
-    const { path } = node.frontmatter ;
+  result.data.postsMDX.edges.forEach(({ node }) => {
+    const { path } = node.frontmatter
 
     createPage({
       path: `${path}`,
       component: blogPostTemplate,
-      context: { 
+      context: {
         id: node.id,
         title: node.title,
         pathDir: path,
       },
-    });
-  });
+    })
+  })
 
-  result.data.categoryGroup.allMdx.distinct.forEach(({category}) => {
+  result.data.categoryGroup.distinct.forEach(category  => {
     createPage({
-      category: `${category}`,
+      path: `category/${category}`,
       component: categoryTemplate,
       context: {
-        categoryName: category
-      }
+        category: category,
+      },
     })
   })
 }
