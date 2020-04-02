@@ -3,6 +3,7 @@ module.exports = {
     title: `Emanuel Canova`,
     description: `Where the code is rising up...`,
     author: `@emanuelcanova`,
+    siteUrl: "https://emanuelcanova.com"
   },
   plugins: [
     `gatsby-plugin-postcss`,
