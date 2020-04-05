@@ -45,18 +45,17 @@ const Layout = ({ children }) => {
       <div className="z-1 bg-gray-900 Nunito-400 text-white flex flex-col min-h-screen">
         <div className="h-8"/>
         <div
+          className="w-11/12 md:w-9/12"
           style={{
             margin: `0 auto`,
-            width: 960,
             padding: `0px 1.0875rem 1.45rem`,
             zIndex: 1,
           }}
         >
-          <div className=' flex flex-row p-16 rounded-lg'
+          <div className='flex flex-row p-4 md:p-16 rounded-lg'
             style={{ background: '#2E333E' }}
           >
             <main className="flex-grow">{children}</main>
-            <Sidebar categories={data.allMdx.distinct} />
           </div>
           <footer className="bottom-0 mt-8 Nunito-200 text-sm flex flex-col">
             <div className="text-gray-200">

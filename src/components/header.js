@@ -21,9 +21,8 @@ const Header = ({ siteTitle }) => (
   <>
   <header>
     <div
-      className="flex flex-col md:flex-row  text-center md:text-left justify-between "
+      className="w-11/12 md:w-9/12 flex flex-col md:flex-row  text-center md:text-left justify-between "
       style={{
-        maxWidth: 960,
         position: 'sticky',
         top: 0,
         zIndex: 2,
