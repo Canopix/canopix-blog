@@ -30,13 +30,13 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h3 className="text-yellow-500 Nunito-800 m-0 w-full md:w-1/4">
+      <h1 className="text-yellow-500 Nunito-800 m-0 w-full md:w-1/4">
         <Link to="/">{siteTitle}</Link>
-      </h3>
+      </h1>
       <div className="flex flex-col md:flex-row w-full md:w-1/4 justify-between padding-5 mt-1">
         {subLinks.map(link => (
           <Link to={link.url}>
-            <h5 className="text-white Nunito-400 m-0">{link.name}</h5>
+            <h3 className="text-white Nunito-400 m-0">{link.name}</h3>
           </Link>
         ))}
       </div>
