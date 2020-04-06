@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => (
       <div className="flex flex-col md:flex-row w-full md:w-1/4 justify-between padding-5 mt-1">
         {subLinks.map(link => (
           <Link to={link.url}>
-            <h5 className="text-white Nunito-200 m-0">{link.name}</h5>
+            <h5 className="text-white Nunito-400 m-0">{link.name}</h5>
           </Link>
         ))}
       </div>
