@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         <Header siteTitle={data.site.siteMetadata.title} />
       </section>
       <img
-        className="z-0"
+        className="z-0 mt-2 md:mt-0"
         style={{
           position: "absolute",
           top: "20px",
