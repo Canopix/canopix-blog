@@ -47,10 +47,9 @@ const Layout = ({ children }) => {
       <Hero />
       <div className="z-1 bg-gray-900 Nunito-400 text-white flex flex-col min-h-screen md:-mt-8">
         <div
-          className="w-11/12 md:w-9/12"
+          className="w-11/12 md:w-9/12 p-0"
           style={{
             margin: `0 auto`,
-            padding: `0px 1.0875rem 1.45rem`,
             zIndex: 1,
           }}
         >
@@ -60,6 +59,8 @@ const Layout = ({ children }) => {
           >
             <main className="flex-grow">{children}</main>
           </div>
+
+          
           <footer className="bottom-0 mt-8 Nunito-200 text-sm flex flex-col">
             <div className="text-gray-200">
               © {new Date().getFullYear()},{` `}
