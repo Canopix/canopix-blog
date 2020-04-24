@@ -7,7 +7,7 @@ import Card from './Card'
 const Lastest = () => {
     const data = useStaticQuery(graphql`
     {
-        allMdx(sort: {order: DESC, fields: frontmatter___date}) {
+        allMdx(sort: {order: DESC, fields: frontmatter___date}, filter: {frontmatter: {title: {ne: "About Me"}}}) {
           edges {
             node {
               frontmatter {
@@ -33,7 +33,7 @@ const Lastest = () => {
     return (
         <div className="grid grid-cols-1 gap-3 mt-4">
             {edges.map(post =>
-              <Card post={post}/>
+              <Card key={post.node.id} post={post}/>
             )}
         </div>
     )

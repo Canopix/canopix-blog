@@ -32,7 +32,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-transition-group": "^4.3.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1",
@@ -43,6 +44,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "debug": "node --nolazy --inspect-brk node_modules/gatsby/dist/bin/gatsby develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",

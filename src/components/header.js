@@ -9,7 +9,7 @@ const subLinks = [
   },
   {
     name: "About Me",
-    url: "/",
+    url: "/about-me",
   },
   {
     name: "Contact",
@@ -21,22 +21,20 @@ const Header = ({ siteTitle }) => (
   <>
   <header>
     <div
-      className="w-11/12 md:w-9/12 flex flex-col md:flex-row  text-center md:text-left justify-between "
+      className="w-11/12 mx-auto p-1 md:pt-4 md:w-9/12 flex flex-col md:flex-row  text-center md:text-left justify-between "
       style={{
         position: 'sticky',
         top: 0,
         zIndex: 2,
-        margin: `0 auto`,
-        padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 className="text-yellow-500 Nunito-800 m-0 w-full md:w-1/4">
+      <h3 className="text-4xl md:text-2xl my-0 text-yellow-500 Nunito-800 m-0 w-full md:w-1/4">
         <Link to="/">{siteTitle}</Link>
-      </h1>
-      <div className="flex flex-col md:flex-row w-full md:w-1/4 justify-between padding-5 mt-1">
+      </h3>
+      <div className="hidden  md:flex flex-col md:flex-row w-full md:w-1/4 justify-between items-center padding-5 mt-1">
         {subLinks.map(link => (
           <Link to={link.url}>
-            <h3 className="text-white Nunito-400 m-0">{link.name}</h3>
+            <h5 className="text-white Nunito-400 m-0">{link.name}</h5>
           </Link>
         ))}
       </div>

@@ -10,8 +10,7 @@ export default function Template({data}) {
     <>
     <Layout>
      <div className="blog-post-container">
-       <div className="blog-post text-white">
-        <p className="text-yellow-500 Nunito-800">Blog /<a className="ml-1" href={`/category/${data.mdx.frontmatter.category}`}>{`${data.mdx.frontmatter.category}`}</a></p>
+       <div className="blog-post text-white text-justify text-xl leading-snug">
        <MDXRenderer>{mdx.body}</MDXRenderer>
        </div>
      </div>
@@ -25,10 +24,7 @@ export const pageQuery = graphql`
     mdx(frontmatter: { path: { eq: $path } }) {
       body
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         path
-        title
-        category
       }
     }
   }
