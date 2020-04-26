@@ -8,6 +8,10 @@ const subLinks = [
     url: "/",
   },
   {
+    name: "Talks",
+    url: "/talks",
+  },
+  {
     name: "About Me",
     url: "/about-me",
   },

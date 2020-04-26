@@ -1,18 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHome, faCoffee, faUserCircle, faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faHome, faCoffee, faUserCircle, faPhone, faChalkboardTeacher } from "@fortawesome/free-solid-svg-icons"
 
 const Links = [
-  {
-    title: "Home",
-    icon: faHome,
-    link:"/"
-  },
   {
     title: "Blog",
     icon: faCoffee,
     link:"/about-me"
+  },
+  {
+    title: "Talks",
+    icon: faChalkboardTeacher,
+    link:"/talks"
   },
   {
     title: "About Me",

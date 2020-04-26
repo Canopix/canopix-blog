@@ -31,7 +31,7 @@ const links = [
 const Footer = () => {
   return (
     <div className="flex flex-row space-between mt-8">
-      <div className="Nunito-200 text-sm flex flex-col justify-center h-16 w-9/12">
+      <div className="Nunito-200 text-sm flex flex-col justify-center h-16 w-8/12 md:w-9/12">
         <div className="flex flex-row items-center">
           <p className="m-0">Made with </p>
           <a href="https://www.gatsbyjs.org/" target="_blank">
@@ -49,13 +49,12 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-row justify-around items-center h-16 w-3/12">
+      <div className="flex flex-row justify-around items-center h-16 w-4/12 md:w-3/12">
         {links.map(link => (
           <a target="_blank" href={link.link}>
             <FontAwesomeIcon
-              className="cursor-pointer hover:text-yellow-500"
+              className="cursor-pointer hover:text-yellow-500 text-xl md:text-3xl"
               icon={link.icon}
-              size="2x"
             />
           </a>
         ))}
