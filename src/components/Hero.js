@@ -23,7 +23,7 @@ const Hero = () => {
         >
           A{" "}
           <ChangeWord
-            words={["developer", "person", "user", "friend"]}
+            words={["dev", "person", "user", "friend"]}
             time={3000}
           />
           , changing the world one bit at a time.
