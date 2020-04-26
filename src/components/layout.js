@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Sidebar from "./Sidebar"
 import Hero from "./Hero"
+import MobileFooter from "./MobileFooter"
 import "./layout.css"
 import wave from "./../static/svg/wave.svg"
 import gatsbyLogo from "./../static/svg/gatsby-monogram.svg"
@@ -60,7 +61,6 @@ const Layout = ({ children }) => {
             <main className="flex-grow">{children}</main>
           </div>
 
-          
           <footer className="bottom-0 mt-8 Nunito-200 text-sm flex flex-col">
             <div className="text-gray-200">
               © {new Date().getFullYear()},{` `}
@@ -84,6 +84,7 @@ const Layout = ({ children }) => {
             </div>
           </footer>
         </div>
+        <MobileFooter />
       </div>
     </div>
   )
