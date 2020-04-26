@@ -4,11 +4,16 @@ import {
   faTwitter,
   faInstagram,
   faLinkedin,
+  faGithub
 } from "@fortawesome/free-brands-svg-icons"
 import gatsbyLogo from "./../static/svg/gatsby-monogram.svg"
 import netlify from "./../static/svg/netlify.svg"
 
 const links = [
+  {
+    icon: faGithub,
+    link: "https://github.com/Canopix",
+  },
   {
     icon: faTwitter,
     link: "https://twitter.com/EmanuelCanova",
