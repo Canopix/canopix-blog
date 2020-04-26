@@ -15,6 +15,7 @@ const Lastest = () => {
                 title
                 category
                 path
+                summary
                 featuredImage {
                     childImageSharp {
                      fluid {
@@ -23,7 +24,6 @@ const Lastest = () => {
                    }
                 }
               }
-              excerpt
             }
           }
         }
