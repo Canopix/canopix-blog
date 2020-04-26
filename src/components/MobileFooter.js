@@ -1,20 +1,28 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHome, faCoffee, faUserCircle } from "@fortawesome/free-solid-svg-icons"
+import { faHome, faCoffee, faUserCircle, faPhone } from "@fortawesome/free-solid-svg-icons"
 
 const Links = [
   {
     title: "Home",
     icon: faHome,
+    link:"/"
   },
   {
     title: "Blog",
     icon: faCoffee,
+    link:"/about-me"
   },
   {
     title: "About Me",
     icon: faUserCircle,
+    link:"/about-me"
+  },
+  {
+    title: "Contact",
+    icon: faPhone,
+    link:"/contact-me"
   },
   
 ]
@@ -27,7 +35,7 @@ const MobileFooter = () => {
     >
       {Links.map(link => (
         <div className={`w-1/${Links.length} flex flex-col h-16 text-white items-center justify-center`}>
-          <Link className='mx-auto text-center' to="/">
+          <Link className='mx-auto text-center' to={link.link}>
             <FontAwesomeIcon icon={link.icon} />
             <p className="m-0">{link.title}</p>
           </Link>
