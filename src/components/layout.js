@@ -54,7 +54,7 @@ const Layout = ({ children }) => {
           }}
         >
           <div
-            className="flex flex-row p-4 md:p-16 rounded-lg"
+            className="flex flex-col p-4 md:p-16 rounded-lg"
             style={{ background: "#2E333E" }}
           >
             <main className="flex-grow">{children}</main>
