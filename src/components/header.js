@@ -15,10 +15,6 @@ const subLinks = [
     name: "About Me",
     url: "/about-me",
   },
-  {
-    name: "Contact",
-    url: "/",
-  },
 ]
 
 const Header = ({ siteTitle }) => (

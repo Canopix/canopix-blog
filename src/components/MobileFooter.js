@@ -7,7 +7,7 @@ const Links = [
   {
     title: "Blog",
     icon: faCoffee,
-    link:"/about-me"
+    link:"/"
   },
   {
     title: "Talks",
@@ -19,12 +19,6 @@ const Links = [
     icon: faUserCircle,
     link:"/about-me"
   },
-  {
-    title: "Contact",
-    icon: faPhone,
-    link:"/contact-me"
-  },
-  
 ]
 
 const MobileFooter = () => {
