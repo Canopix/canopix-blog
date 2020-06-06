@@ -30,7 +30,7 @@ const links = [
 
 const Footer = () => {
   return (
-    <div className="flex flex-row space-between mt-8">
+    <div className="flex flex-row space-between mt-16 px-8 bg-gray-900 Nunito-400 text-white md:-mt-8">
       <div className="Nunito-200 text-sm flex flex-col justify-center h-16 w-8/12 md:w-9/12">
         <div className="flex flex-row items-center">
           <p className="m-0">Made with </p>

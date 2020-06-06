@@ -16,7 +16,7 @@ export default [
         language: 'Spanish',
         description: 'A little overview of What is Micro Frontend and how you can implement it on your project.',
         organization: 'BeerJs Cba',
-        organizationLink: 'www.beerjscba.com',
+        organizationLink: 'https://www.beerjscba.com',
         date: '07/25/2019',
         link: 'https://www.youtube.com/watch?v=0YNDKEP5_Dk',
         slides: 'https://drive.google.com/open?id=15Y62xvnKoeVVRKdTKwA8PmW3T6bXm8UukvI9ZUC5bmI'

@@ -11,6 +11,7 @@ export default function Template({data}) {
      <div className="blog-post-container">
        <div className="blog-post text-white">
         <p className="text-yellow-500 Nunito-800">Blog /<a className="ml-1" href={`/category/${data.mdx.frontmatter.category}`}>{`${data.mdx.frontmatter.category}`}</a></p>
+        <h1 className="w-full text-center my-16">{data.mdx.frontmatter.title}</h1>
        <MDXRenderer>{mdx.body}</MDXRenderer>
        </div>
      </div>

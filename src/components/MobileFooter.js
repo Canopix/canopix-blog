@@ -24,7 +24,7 @@ const Links = [
 const MobileFooter = () => {
   return (
     <div
-      className="md:hidden m-0 w-full flex flex-row justify-between sticky z-10 bottom-0"
+      className="Nunito-400 md:hidden m-0 w-full flex flex-row justify-between sticky z-10 bottom-0"
       style={{ background: "#41337A" }}
     >
       {Links.map(link => (
