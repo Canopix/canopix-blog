@@ -2,15 +2,20 @@ import React from "react"
 import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql } from "gatsby"
-import Dump from '../components/Dump'
+import Dump from "../components/Dump"
 
 function categoryTemplate({ pageContext, data }) {
-  const {nodes} = data.allMdx;
+  const { nodes } = data.allMdx
   return (
     <Layout>
-      <Dump data={data}/>
-      <h3>Category: {pageContext.category}</h3>
-      {nodes.map(post => post.frontmatter.title)}
+      <div className="mt-4" style={{ minHeight: "50vh" }}>
+        <h3>Post in Category: {pageContext.category}</h3>
+        {nodes.map(post => (
+          <div className="my-4">
+            <a className="Nunito-800 text-lg" href={post.frontmatter.path}>{post.frontmatter.title} </a>
+          </div>
+        ))}
+      </div>
     </Layout>
   )
 }
@@ -27,6 +32,7 @@ export const pageQuery = graphql`
         frontmatter {
           title
           date
+          path
         }
       }
     }
