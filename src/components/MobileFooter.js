@@ -5,6 +5,11 @@ import { faHome, faCoffee, faUserCircle, faPhone, faChalkboardTeacher } from "@f
 
 const Links = [
   {
+    title: "About Me",
+    icon: faUserCircle,
+    link:"/about-me"
+  },
+  {
     title: "Blog",
     icon: faCoffee,
     link:"/"
@@ -13,11 +18,6 @@ const Links = [
     title: "Talks",
     icon: faChalkboardTeacher,
     link:"/talks"
-  },
-  {
-    title: "About Me",
-    icon: faUserCircle,
-    link:"/about-me"
   },
 ]
 

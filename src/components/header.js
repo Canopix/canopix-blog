@@ -4,16 +4,16 @@ import React from "react"
 
 const subLinks = [
   {
+    name: "About Me",
+    url: "/about-me",
+  },
+  {
     name: "Blog",
     url: "/",
   },
   {
     name: "Talks",
     url: "/talks",
-  },
-  {
-    name: "About Me",
-    url: "/about-me",
   },
 ]
 
