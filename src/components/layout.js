@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
         src={wave}
       />
       <Hero />
-      <div className="z-1 bg-gray-900 Nunito-400 text-white flex flex-col md:-mt-8" style={{minHeight:'90vh'}}>
+      <div className="z-1 mx-auto bg-gray-900 Nunito-400 text-white flex flex-col md:-mt-8" style={{minHeight:'90vh', maxWidth: '1300px'}}>
         <div
           className="w-11/12 p-0"
           style={{

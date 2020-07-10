@@ -1,319 +1,96 @@
 ---
-path: "/blog/my-first-post"
-date: "2019-05-04"
-title: "My first blog post"
+path: "/blog/first-post-centered-things-css"
+date: "2020-07-10"
+title: "First Post and getting things centered easily"
 summary: "First post on this blog, check this out! I'm Here!"
-category: "Pebete"
+category: "Blog"
 featuredImage: "./featured.jpeg"
 ---
 
-### Features
+It's weird write a first post about the first post. 
+In my mind, my blog was going to start with a few post series and genuinely content, but I realize that it is better a humble start and growing step by step among all of you. 
 
-- Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
-- Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting...;
-- Markdown Extras : Support ToC (Table of Contents), Emoji, Task lists, @Links...;
-- Compatible with all major browsers (IE8+), compatible Zepto.js and iPad;
-- Support identification, interpretation, fliter of the HTML tags;
-- Support TeX (LaTeX expressions, Based on KaTeX), Flowchart and Sequence Diagram of Markdown extended syntax;
-- Support AMD/CMD (Require.js & Sea.js) Module Loader, and Custom/define editor plugins;
+So following that, my intentions are clear: 
+Create content that helps anybody to learn about web development. 
+Have a place to share the results of my curiosity
+Have an excellent moment writing content in a language that is not my mother tongue (Thanks Grammarly for being a fantastic tool)
 
-# Editor.md
+The main topics to write about are Front-end development, remote working, and work-life balance (the last one will be a place where I'm going to share some of my opinions about life and how to face some situations at work and more related).
 
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+Beginning with this, we can continue with the topic of this post! 
 
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+## Getting things in place quickly:
 
+One of the most painful experiences as a front-end developer at the beginning (also when you have a few years on this) is related to "How can I Center something in the middle of the screen, div or a parent in general?". 
 
-**Table of Contents**
+Trust me, I had a few headaches with this for a long time, mainly when solutions like CSS Grid or Flexbox was not in the scene. 
 
-[TOCM]
+But now, we are here, in this era, and with a lot of ways to do this, I'm going to focus on two methods: Flexbox and CSS Grid, (why? Because I want and also, are easy to learn :) )
 
-[TOC]
+So, if you are not familiar with Flexbox or CSS Grid, you need to understand that these are not fighting for your attention. You can work with both getting benefits of using one or another depending on the situation. 
 
-#H1 header
-##H2 header
-###H3 header
-####H4 header
-#####H5 header
-######H6 header
-#Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-##Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-###Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-####Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
-#####Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-######Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+To resume (very short ninja resume level 5), CSS Grid is a system that allows you to create layouts in two dimensions easily. Flexbox gives you the possibility to order content in one dimension with a few lines of code (also, you can make layouts too, the limit is how much you're comfortable with one or both of these techniques).
 
-##Headers (Underline)
+## Flexbox
 
-H1 Header (Underline)
-=============
+As I said earlier, one dimension and gives you the control of elements with a few lines of code.
+So, to understand "How to center a div with Flexbox," you need to know how to Flexbox position elements vertically and horizontally, or both at the same time. 
 
-H2 Header (Underline)
--------------
+If you want to see your elements in a row, you need to use 
 
-###Characters
-                
-----
-
-~~Strikethrough~~ <s>Strikethrough (when enable html tag decode.)</s>
-*Italic*      _Italic_
-**Emphasis**  __Emphasis__
-***Emphasis Italic*** ___Emphasis Italic___
-
-Superscript: X<sub>2</sub>，Subscript: O<sup>2</sup>
-
-**Abbreviation(link HTML abbr tag)**
-
-The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
-
-###Blockquotes
-
-> Blockquotes
-
-Paragraphs and Line Breaks
-                    
-> "Blockquotes Blockquotes", [Link](http://localhost/)。
-
-###Links
-
-[Links](http://localhost/)
-
-[Links with title](http://localhost/ "link title")
-
-`<link>` : <https://github.com>
-
-[Reference link][id/name] 
-
-[id/name]: http://link-url/
-
-GFM a-tail link @pandao
-
-###Code Blocks (multi-language) & highlighting
-
-####Inline code
-
-`$ npm install marked`
-
-####Code Blocks (Indented style)
-
-Indented 4 spaces, like `<pre>` (Preformatted Text).
-
-    <?php
-        echo "Hello world!";
-    ?>
-    
-Code Blocks (Preformatted text):
-
-    | First Header  | Second Header |
-    | ------------- | ------------- |
-    | Content Cell  | Content Cell  |
-    | Content Cell  | Content Cell  |
-
-####Javascript　
-
-```javascript
-function test(){
-	console.log("Hello world!");
-}
- 
-(function(){
-    var box = function(){
-        return box.fn.init();
-    };
-
-    box.prototype = box.fn = {
-        init : function(){
-            console.log('box.init()');
-
-			return this;
-        },
-
-		add : function(str){
-			alert("add", str);
-
-			return this;
-		},
-
-		remove : function(str){
-			alert("remove", str);
-
-			return this;
-		}
-    };
-    
-    box.fn.init.prototype = box.fn;
-    
-    window.box =box;
-})();
-
-var testBox = box();
-testBox.add("jQuery").remove("jQuery");
+```css
+display: flex;
+flex-direction: row;
 ```
 
-####HTML code
+And if you are looking for a column of elements, need: 
 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <mate charest="utf-8" />
-        <title>Hello world!</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-    </body>
-</html>
+```css
+display: flex;
+flex-direction: column;
 ```
 
-###Images
+So, EMANUEL, where the hell are those centered positions on flexbox? Take it easy! We will get there very soon!  
 
-Image:
+If you combine two CSS properties of flexbox, you can get an item centered horizontally and vertically.
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
-
-> Follow your heart.
-
-![](https://pandao.github.io/editor.md/examples/images/8.jpg)
-
-> 图为：厦门白城沙滩 Xiamen
-
-图片加链接 (Image + Link)：
-
-[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/examples/images/7.jpg "李健首张专辑《似水流年》封面")
-
-> 图为：李健首张专辑《似水流年》封面
-                
-----
-
-###Lists
-
-####Unordered list (-)
-
-- Item A
-- Item B
-- Item C
-     
-####Unordered list (*)
-
-* Item A
-* Item B
-* Item C
-
-####Unordered list (plus sign and nested)
-                
-+ Item A
-+ Item B
-    + Item B 1
-    + Item B 2
-    + Item B 3
-+ Item C
-    * Item C 1
-    * Item C 2
-    * Item C 3
-
-####Ordered list
-                
-1. Item A
-2. Item B
-3. Item C
-                
-----
-                    
-###Tables
-                    
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell 
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-| Item      | Value |
-| --------- | -----:|
-| Computer  | $1600 |
-| Phone     |   $12 |
-| Pipe      |    $1 |
-
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------------ |:---------------:| -----:|
-| col 3 is      | some wordy text | $1600 |
-| col 2 is      | centered        |   $12 |
-| zebra stripes | are neat        |    $1 |
-                
-----
-
-####HTML entities
-
-&copy; &  &uml; &trade; &iexcl; &pound;
-&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot; 
-
-X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
-
-18&ordm;C  &quot;  &apos;
-
-##Escaping for Special Characters
-
-\*literal asterisks\*
-
-##Markdown extras
-
-###GFM task list
-
-- [x] GFM task list 1
-- [x] GFM task list 2
-- [ ] GFM task list 3
-    - [ ] GFM task list 3-1
-    - [ ] GFM task list 3-2
-    - [ ] GFM task list 3-3
-- [ ] GFM task list 4
-    - [ ] GFM task list 4-1
-    - [ ] GFM task list 4-2
-
-###Emoji mixed :smiley:
-
-> Blockquotes :star:
-
-####GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:
-
-- [x] :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;
-- [x] list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;
-- [x] [ ] :smiley: this is a complete item :smiley:;
-- [ ] []this is an incomplete item [test link](#) :fa-star: @pandao; 
-- [ ] [ ]this is an incomplete item :fa-star: :fa-gear:;
-    - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;
-    - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);
-            
-###TeX(LaTeX)
-   
-$$E=mc^2$$
-
-Inline $$E=mc^2$$ Inline，Inline $$E=mc^2$$ Inline。
-
-$$\(\sqrt{3x-1}+(1+x)^2\)$$
-                    
-$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
-                
-###FlowChart
-
-```js
-const js = Math.random()
+```css
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 ```
 
-###Sequence Diagram
-                    
-```js
-Andrew->China: Says Hello 
-Note right of China: China thinks\nabout it 
-China-->Andrew: How are you? 
-Andrew->>China: I am good thanks!
-```
+So easy! I dare you to play removing `justify-content` or `align-items` to see how it work.
 
-###End
+<iframe
+     src="https://codesandbox.io/embed/focused-wildflower-x3n8g?autoresize=1&fontsize=14&theme=dark&view=preview"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="focused-wildflower-x3n8g"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+# CSS Grid
+
+
+With CSS Grid, you only need one line of code to place the items at the center:
+
+```
+  place-items: center;
+```
+The place-items property in CSS is shorthand for the align-items and justify-items properties, combining them into a single declaration.
+
+<iframe
+     src="https://codesandbox.io/embed/nostalgic-buck-ut1v1?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="nostalgic-buck-ut1v1"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+
+ Now you know how to center something in the middle of a parent, screen or anything that you want.
+ A simple trick to start a new blog, sound a deal to me. 
+
+### This is the end of the beginning of my blog, So if you are here, is because you read everything (or scrolled to here) and I'm thankful to you for that, I hope being honored with your visit soon! Thanks!

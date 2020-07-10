@@ -3,15 +3,24 @@ module.exports = {
     title: `Emanuel Canova`,
     description: `Where the code is rising up...`,
     author: `@emanuelcanova`,
-    siteUrl: "https://emanuelcanova.com"
+    siteUrl: "https://emanuelcanova.com",
   },
   plugins: [
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-embedder`,
+          },
+        ],
+      },
+    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-mdx',
-    // `gatsby-plugin-feed-mdx`,
+    "gatsby-plugin-mdx",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,7 +42,7 @@ module.exports = {
         path: `${__dirname}/src/blog`,
       },
     },
-    { 
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
