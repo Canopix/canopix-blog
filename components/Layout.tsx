@@ -16,15 +16,16 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
     <>
       <Head customMeta={customMeta} />
       <header>
-        <div className="max-w-5xl px-8 mx-auto">
+        <div className="max-w-7xl px-8 mx-auto">
           <div className="flex items-center justify-between py-6">
-            <Navigation />
             <ThemeSwitch />
+            <h1 className="m-0 p-0">Emanuel Canova</h1>
+            <Navigation />
           </div>
         </div>
       </header>
       <main>
-        <div className="max-w-5xl px-8 py-4 mx-auto">{children}</div>
+        <div className="max-w-7xl px-8 py-4 mx-auto">{children}</div>
       </main>
       <footer className="py-8">
         <div className="max-w-5xl px-8 mx-auto">
