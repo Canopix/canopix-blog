@@ -13,7 +13,7 @@ export const WEBSITE_HOST_URL = 'https://nextjs-typescript-mdx-blog.vercel.app';
 
 const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <Head customMeta={customMeta} />
       <header>
         <div className="max-w-7xl px-8 mx-auto">
@@ -24,9 +24,9 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
           </div>
         </div>
       </header>
-      <main>
-        <div className="max-w-7xl px-8 py-4 mx-auto">{children}</div>
-      </main>
+
+      <div className="max-w-7xl px-8 py-4 mx-auto flex-grow">{children}</div>
+
       <footer className="py-8">
         <div className="max-w-5xl px-8 mx-auto">
           Built by{' '}
@@ -34,11 +34,11 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
             className="text-gray-900 dark:text-white"
             href="https://twitter.com/huntarosan"
           >
-            Hunter Chang
+            Canova Emanuel
           </a>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

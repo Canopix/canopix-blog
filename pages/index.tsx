@@ -1,4 +1,3 @@
-import { format, parseISO } from 'date-fns';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import React from 'react';
@@ -13,32 +12,26 @@ type IndexProps = {
 export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
     <Layout>
-      {posts.map((post) => (
-        <article key={post.slug} className="mt-12">
-          <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-            {format(parseISO(post.date), 'MMMM dd, yyyy')}
-          </p>
-          <h1 className="mb-2 text-xl">
+      <div className="flex">
+        {posts.map((post) => (
+          <div key={post.title} className="card w-1/4 m-2">
+            <figure>
+              <img src="https://picsum.photos/id/1005/400/250" />
+            </figure>
             <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
-              <a className="text-gray-900 dark:text-white dark:hover:text-blue-400">
-                {post.title}
-              </a>
+              <div className="card-body m-0 px-0">
+                <h2 className="card-title">{post.title}</h2>
+              </div>
             </Link>
-          </h1>
-          <p className="mb-3">{post.description}</p>
-          <p>
-            <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
-              <a>Read More</a>
-            </Link>
-          </p>
-        </article>
-      ))}
+          </div>
+        ))}
+      </div>
     </Layout>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllPosts(['date', 'description', 'slug', 'title']);
+  const posts = getAllPosts(['date', 'description', 'slug', 'title', 'tags']);
 
   return {
     props: { posts },
